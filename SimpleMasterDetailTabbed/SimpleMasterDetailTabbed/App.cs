@@ -5,13 +5,9 @@ namespace SimpleMasterDetailTabbed
 {
 	public class App : Application
 	{
-		private static Page _NavPage;
-		public static Page RootPage()
+		public App()
 		{
-			_NavPage = new MainView();
-
-			return _NavPage;
+			MainPage = new MainView ();
 		}
 	}
 }
-
