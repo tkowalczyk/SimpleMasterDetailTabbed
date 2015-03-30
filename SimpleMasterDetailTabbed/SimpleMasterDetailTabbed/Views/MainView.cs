@@ -1,6 +1,6 @@
 ﻿using System;
-using Xamarin.Forms;
 using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace SimpleMasterDetailTabbed
 {
@@ -57,13 +57,6 @@ namespace SimpleMasterDetailTabbed
 				Detail.Title = master.PageSelection.Title;
 				IsPresented = false;
 			};
-		}
-		#endregion
-
-		#region Overrides
-		protected override void OnAppearing()
-		{
-			base.OnAppearing();
 		}
 		#endregion
 	}

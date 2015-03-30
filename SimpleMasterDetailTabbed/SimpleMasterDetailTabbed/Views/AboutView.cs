@@ -7,10 +7,23 @@ namespace SimpleMasterDetailTabbed
 	{
 		public AboutView ()
 		{
-			this.Content = new Label {
-				Text = "About View!",
-				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HorizontalOptions = LayoutOptions.CenterAndExpand,
+			this.Content = new StackLayout()
+			{
+				Orientation = StackOrientation.Vertical,
+				Children = {
+					new Label {
+						Text = "About View!",
+						VerticalOptions = LayoutOptions.CenterAndExpand,
+						HorizontalOptions = LayoutOptions.CenterAndExpand,
+					},
+					new Button {
+						Text = "Show FeedbackView",
+						Command = new Command(() => 
+							{
+								this.Navigation.PushAsync(new FeedbackView());
+							})
+					}
+				}
 			};
 		}
 	}
