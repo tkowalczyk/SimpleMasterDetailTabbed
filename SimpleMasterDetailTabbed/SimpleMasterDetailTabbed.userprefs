@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="iOS/SimpleMasterDetailTabbed.iOS.csproj">
+﻿<Properties StartupItem="Android/SimpleMasterDetailTabbed.Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6Plus.8.2" />
   <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
