@@ -28,7 +28,7 @@ namespace SimpleMasterDetailTabbed
 
 			this.IsGestureEnabled = false;
 
-			//this.IsPresented = true;
+			this.IsPresented = true;
 
 			this.MasterBehavior = MasterBehavior.Split;
 
@@ -59,7 +59,6 @@ namespace SimpleMasterDetailTabbed
 				}
 				Detail = newPage;
 				Detail.Title = master.PageSelection.Title;
-				IsPresented = false;
 			};
 		}
 		#endregion
