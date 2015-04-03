@@ -20,6 +20,12 @@ namespace SimpleMasterDetailTabbed
 		#region Ctor
 		public MainView()
 		{
+			MessagingCenter.Subscribe<FeedbackView> (this, "OpenInDetail", (sender) => {
+				var fv = sender as FeedbackView;
+
+				this.Detail = new NavigationPage(fv);
+			});
+
 			pages = new Dictionary<MenuType, NavigationPage>();
 
 			this.BindingContext = new MenuViewModel();
@@ -28,9 +34,7 @@ namespace SimpleMasterDetailTabbed
 
 			this.IsGestureEnabled = false;
 
-			this.IsPresented = true;
-
-			this.MasterBehavior = MasterBehavior.Split;
+//			this.MasterBehavior = MasterBehavior.Split;
 
 			var homeNav = new NavigationPage(master.PageSelection)
 			{
@@ -59,6 +63,8 @@ namespace SimpleMasterDetailTabbed
 				}
 				Detail = newPage;
 				Detail.Title = master.PageSelection.Title;
+
+				this.IsPresented = false;
 			};
 		}
 		#endregion

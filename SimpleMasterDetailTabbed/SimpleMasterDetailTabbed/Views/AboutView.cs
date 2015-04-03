@@ -18,9 +18,18 @@ namespace SimpleMasterDetailTabbed
 					},
 					new Button {
 						Text = "Show FeedbackView",
-						Command = new Command(() => 
+						Command = new Command(p => 
 							{
-								this.Navigation.PushAsync(new FeedbackView());
+//								Solution #1
+//								MainView mv = new MainView();
+//								mv.Detail = new NavigationPage(new FeedbackView());
+//
+//								App.Current.MainPage = mv;
+
+//								Solution #2
+								FeedbackView fv = new FeedbackView();
+
+								MessagingCenter.Send<FeedbackView> (fv, "OpenInDetail");
 							})
 					}
 				}
