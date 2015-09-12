@@ -34,8 +34,6 @@ namespace SimpleMasterDetailTabbed
 
 			this.IsGestureEnabled = false;
 
-//			this.MasterBehavior = MasterBehavior.Split;
-
 			var homeNav = new NavigationPage(master.PageSelection)
 			{
 
